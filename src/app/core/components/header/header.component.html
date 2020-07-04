@@ -1,8 +1,23 @@
 <mat-toolbar color="primary">
     <mat-toolbar-row>
-    <mat-icon>menu</mat-icon>
-      <span>EMS</span>
-      <span class="example-spacer"></span>
-      <mat-icon class="example-icon" aria-hidden="false" aria-label="Example delete icon">perm_identity</mat-icon>
+      <div class="header">
+          <div class="header">
+            <div class="left-section">
+              <mat-icon>menu</mat-icon>
+              <span>EMS</span>
+            </div>
+            <div class="right-section">
+              <button mat-icon-button [matMenuTriggerFor]="menu">
+                <mat-icon>perm_identity</mat-icon>
+              </button>
+              <mat-menu #menu="matMenu">
+                <button mat-menu-item>
+                  <mat-icon>exit_to_app</mat-icon>
+                  Logout
+                </button>
+              </mat-menu>
+            </div>
+          </div>
+      </div>
     </mat-toolbar-row>
   </mat-toolbar>
